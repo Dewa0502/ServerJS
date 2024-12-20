@@ -22,6 +22,8 @@ const server = http.createServer((req, res) => {
         __dirname,
         req.url === "/" ? "index.html" : req.url
     );
+    console.log(filepath);
+    
     
     //Determining the file type
 
@@ -55,5 +57,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-    console.log('Server is listening on port ${port}');
+    console.log(`Server is listening on port ${port}`);
 });
